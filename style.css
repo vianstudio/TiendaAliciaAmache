@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,600&family=Oswald:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    background-image: url(img/Portada.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    padding: 3%;
+}
+header h1{
+    text-align: center;
+    font-size: 35px;
+    color: aliceblue;
+    padding: 30px 0;
+}
+.logo{
+    max-width: 250px;
+}
+.contenedor{
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    contain: paint;
+}
+.contenedor .contenedor-items{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    width: 100%;
+    transition: .3s;
+}
+.contenedor .contenedor-items .item{
+    max-width: 200px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid rgb(109, 107, 107);
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+}
+.contenedor-items .item:hover{
+    box-shadow: 0 0 10px rgb(109, 107, 107);
+    scale: 1.05;
+}
+.contenedor-items .item .img-item{
+    width: 100%;
+}
+.contenedor-items .item .titulo-item{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contenedor-items .item .precio-item{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+.contenedor-items .item .boton-item{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background: black;
+    color: aliceblue;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*seccion carrito*/
+.carrito{
+    border: 1px solid #666;
+    width: 35%;
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: auto;
+    position: sticky !important;
+    top: 0;
+    transition: .3s;
+    opacity: 0;
+    margin-right: -100%;
+}
+.carrito .header-carrito{
+    background-color: #000;
+    color: aliceblue;
+    text-align: center;
+    padding: 30px 0;
+}
+.carrito .carrito-item{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #666;
+    padding: 20px;
+}
+.carrito .carrito-item img{
+    margin-right: 20px;
+}
+.carrito .carrito-item .carrito-item-titulo{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.carrito .carrito-item .selector-cantidad{
+    display: inline-block;
+    margin-right: 25px;
+}
+.carrito .carrito-item .carrito-item-cantidad{
+    border: none;
+    font-size: 18px;
+    background: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+.carrito .carrito-item .selector-cantidad i{
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.carrito .carrito-item .carrito-item-precio{
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.carrito .carrito-item .btn-eliminar{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #000;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    display: block;
+    background: transparent;
+    z-index: 20;
+    cursor: pointer;
+}
+.carrito .carrito-item  .btn-eliminar i{
+    pointer-events: none;
+}
+.carrito-total{
+    background-color: #f3f3f3;
+    padding: 30px;
+}
+.carrito-total .fila{
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.carrito-total .btn-pagar{
+    display: block;
+    width: 100%;
+    border: none;
+    background: #000;
+    color: aliceblue;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 3s;
+}
+
+.carrito-total .btn-pagar:hover{
+    scale: 1.05;
+}
+
+/*seccion responsive*/
+@media screen and (max-width:850px) {
+    .contenedor{
+        display: block;
+    }
+    .contenedor-items{
+        width: 100% !important;
+    }
+    .carrito{
+        width: 100%;
+    }
+    
+}
+
+.footer{
+    width: 100%;
+    left: 0%;
+    bottom: 0%;
+    padding: 2rem 4%;
+    background-color: rgb(243, 219, 219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo-footer{
+    height: 250px;
+    margin-bottom: 1rem;
+    position: center;
+    left: 20px;
+}
+
+.social-icons-container, .footer-menu-container{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.social-icon{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: 1px solid #f2f2f2;
+    background-image: url(img/facebook.png);
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    margin: 1rem;
+}
+
+.social-icon:hover{
+    background-color: #000;
+    filter: invert(1);
+}
+
+.social-icon:nth-last-of-type(2){
+    background-image: url(img/instagram.png);
+}
+.social-icon:nth-last-of-type(3){
+    background-image: url(img/gmail.png);
+}
+.social-icon:nth-last-of-type(4){
+    background-image: url(img/whatapp.png);
+}
+
+.footer-menu-container{
+    list-style-type: none;
+    color: #f30404;
+    font-size: 18px;
+}
+
+.menu-item{
+    margin: 1rem 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+.menu-item:hover{
+    opacity: 1;
+}
+
+.copyright{
+    color: #353131;
+    opacity: 0.3;
+    text-align: center;
+}
+
